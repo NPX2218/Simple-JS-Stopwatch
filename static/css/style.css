@@ -1,6 +1,7 @@
 /*Importing text styles*/
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
+/*Setting the body*/
 body {
   background: orange;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
@@ -9,6 +10,11 @@ body {
   cursor: none;
 }
 
+* {
+  cursor: none;
+}
+
+/*The main wrapper*/
 .wrapper {
   width: 800px;
   margin: 30px auto;
@@ -16,13 +22,18 @@ body {
   text-align: center;
 }
 
-h3 {
-  font-family: "Orbitron", sans-serif;
+/*Header 1*/
+h1 {
   font-weight: 100;
-  font-size: 2.6em;
-  text-transform: uppercase;
+  animation-play-state: paused;
+  font-size: 400%;
+  font-family: "Orbitron", sans-serif;
+  animation-name: main-title-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
+/*Header 2*/
 h2 {
   font-family: "Orbitron", sans-serif;
   font-weight: 100;
@@ -30,11 +41,21 @@ h2 {
   text-transform: uppercase;
 }
 
+/*Header 3*/
+h3 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 100;
+  font-size: 2.6em;
+  text-transform: uppercase;
+}
+
+/*Seconds and Tens Text*/
 #seconds,
 #tens {
   font-size: 2em;
 }
 
+/*Buttons used on page*/
 button {
   cursor: none;
   border: 1px solid #fff;
@@ -50,8 +71,10 @@ button {
   margin: 10px;
   outline: none;
   border-radius: 10px;
+  cursor: none;
 }
 
+/*On button hover*/
 button:hover {
   cursor: none;
   transition: all 600ms ease;
@@ -60,10 +83,13 @@ button:hover {
   color: white;
 }
 
+/*After leaving hover*/
 button:not(:hover) {
+  cursor: none;
   transition: all 1000ms ease;
   background-color: white;
   color: orange;
+  border: 1px solid #fff;
 }
 
 a {
@@ -74,17 +100,13 @@ p {
   font-family: "Orbitron", sans-serif;
 }
 
-h1 {
-  font-weight: 100;
-  animation-play-state: paused;
-  font-size: 400%;
+b {
   font-family: "Orbitron", sans-serif;
-  animation-name: h1;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+  font-size: 10px;
 }
 
-@keyframes h1 {
+/*main-title-animation for the main title*/
+@keyframes main-title-animation {
   25% {
     font-size: 400%;
     opacity: 1;

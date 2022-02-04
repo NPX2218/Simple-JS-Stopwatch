@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="scripts/script.js"></script>
+    <!--Importing CSS Styles and  JavaScript-->
+    <script src="src/scripts/script.js"></script>
+    <script src="src/scripts/cursor.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="static/css/cursor.css">
     <link rel="stylesheet" href="static/css/style.css">
+    <link rel="shortcut icon" href="img/stopwatch.ico" type="image/x-icon">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <title>Document</title>
+    <title>Simple JS Stopwatch | Neel Bansal</title>
     <div class="wrapper">
             <br><br><br>
+            <!--Setting the main front-end page-->
             <h1 id="pulse-text">Stopwatch</h1>
             <h2>JavaScript Stopwatch</h2>
             <p><span id="seconds">00</span> : <span id="tens">00</span><span> s</span></p>
@@ -21,26 +27,10 @@
             <button id="button-reset">Reset</button>
             <button style="width:500px;"id="button-pulse">Turn Pulse Off/On</button>
             <p id="funcText">Click Start to start the timer!</p>
-            <a>By Neel Bansal</a>
+            <b>Copyright Neel Bansal © 2021-2022</b>
         </div> 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Div for cursor-->
     <div class="cursor"></div>
-        <script>
-        const cursor = document.querySelector('.cursor');
-
-        document.addEventListener('mousemove', e => {
-            cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-        })
-
-        document.addEventListener('click', () => {
-            cursor.classList.add("expand");
-
-            setTimeout(() => {
-                cursor.classList.remove("expand");
-                }, 500)
-            })
-        </script>
     </body>
 </html>   
         
