@@ -1,6 +1,7 @@
 // On window load function
-window.onload = function () {
-    
+window.onload = function() {
+  
+
     // Setting the variables
     var seconds = 00; 
     var tens = 00; 
@@ -13,14 +14,13 @@ window.onload = function () {
     var funcText = document.getElementById('funcText');
     var pulseText = document.getElementById('pulse-text');
     var Interval;
-    
+    pulseText.style.animationPlayState = 'paused';
     // On button start function
     buttonPulse.onclick = function(){
       if (pulseText.style.animationPlayState == 'paused'){
-        console.log("hi")
         pulseText.style.animationPlayState = 'running';
       }else{
-        console.log("hi")
+        pulseText.style.fontSize = '9vh';
         pulseText.style.animationPlayState = 'paused';
       }
       
@@ -82,6 +82,23 @@ window.onload = function () {
       }
     
     }
+
+    /////////////////////////////////////////////////////////////////
+    //Creating the Cursor
+    /////////////////////////////////////////////////////////////////
+    const cursor = document.querySelector('.cursor');
+
+    document.addEventListener('mousemove', e => {
+        cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+    })
+
+    document.addEventListener('click', () => {
+        cursor.classList.add("expand");
+
+        setTimeout(() => {
+            cursor.classList.remove("expand");
+            }, 500)
+        })
 }
 
 

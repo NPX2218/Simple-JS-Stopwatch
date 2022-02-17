@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Importing CSS Styles and  JavaScript-->
     <script src="src/scripts/script.js"></script>
-    <script src="src/scripts/cursor.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="static/css/cursor.css">
@@ -22,10 +21,12 @@
             <h1 id="pulse-text">Stopwatch</h1>
             <h2>JavaScript Stopwatch</h2>
             <p><span id="seconds">00</span> : <span id="tens">00</span><span> s</span></p>
-            <button id="button-start">Start</button>
-            <button id="button-stop">Pause</button>
-            <button id="button-reset">Reset</button>
-            <button style="width:500px;"id="button-pulse">Turn Pulse Off/On</button>
+            <div class="button-wrapper">
+                <button id="button-start">Start</button>
+                <button id="button-stop">Pause</button>
+                <button id="button-reset">Reset</button>
+             </div>
+            <button id="button-pulse">Turn Pulse Off/On</button>
             <p id="funcText">Click Start to start the timer!</p>
             <b>Copyright Neel Bansal © 2021-2022</b>
         </div> 
